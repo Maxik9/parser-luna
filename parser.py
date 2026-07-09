@@ -239,6 +239,11 @@ def main():
             
     print(f"Total products scraped: {len(all_products)}")
     
+    # SAFETY CHECK: Do not overwrite if we scraped very few products (e.g. site blocked us or changed layout)
+    if len(all_products) < 50:
+        print("Error: Too few products scraped (less than 50). Aborting to preserve the old feed!")
+        return
+    
     xml_content = build_xml(categories, all_products)
     
     with open("feed.xml", "w", encoding="utf-8") as f:

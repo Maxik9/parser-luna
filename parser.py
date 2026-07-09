@@ -29,6 +29,8 @@ def get_categories():
         categories = {}
         menu = soup.find('div', class_='ds-menu-main-catalog')
         if not menu:
+            print(f"Error: Could not find 'ds-menu-main-catalog'. Status code: {resp.status_code}")
+            print(f"Response snippet: {resp.text[:500]}")
             return categories
             
         items = menu.find_all('a', class_='ds-menu-maincategories-item-title')

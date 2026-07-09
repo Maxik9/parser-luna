@@ -137,27 +137,37 @@ def scrape_product(url, cat_id):
             desc = "".join([str(c) for c in desc_div.contents])
             
         # Images
-        pictures = set()
+        vendor_code = prod_id
+        for li in soup.find_all('li'):
+            text = li.get_text(strip=True)
+            if 'Модель:' in text or 'Код:' in text or 'Артикул:' in text:
+                vc = text.replace('Модель:', '').replace('Код:', '').replace('Артикул:', '').strip()
+                if vc:
+                    vendor_code = vc
+                    break
+                    
+        pictures = []
         
         # In oct_deals they are usually in a tags with data-fancybox
         for a in soup.find_all('a', {'data-fancybox': 'gallery'}):
             href = a.get('href')
-            if href:
-                pictures.add(href)
+            if href and href not in pictures:
+                pictures.append(href)
                 
         if not pictures:
             for img in soup.find_all('img'):
                 src = img.get('src')
                 if src and 'catalog/' in src and ('-800x800' in src or '-1000x' in src or '-500x' in src):
                     if not src.endswith('32x32.png') and not src.endswith('32x32.jpg'):
-                        # remove -800x800.jpg and put original or keep 800x800 depending on what they serve.
-                        pictures.add(src)
+                        if src not in pictures:
+                            pictures.append(src)
                         
         if not pictures:
             for img in soup.find_all('img'):
                 src = img.get('src')
                 if src and 'catalog/' in src and 'cache' not in src:
-                    pictures.add(src)
+                    if src not in pictures:
+                        pictures.append(src)
 
         return {
             'id': prod_id,
@@ -166,7 +176,8 @@ def scrape_product(url, cat_id):
             'categoryId': cat_id,
             'name': title,
             'description': desc.strip(),
-            'pictures': list(pictures)
+            'vendorCode': vendor_code,
+            'pictures': pictures
         }
     except Exception as e:
         print(f"Error scraping product {url}: {e}")
@@ -209,6 +220,7 @@ def build_xml(categories, products):
             xml.append(f'        <picture>{html.escape(pic)}</picture>')
             
         xml.append(f'        <name>{html.escape(p["name"])}</name>')
+        xml.append(f'        <vendorCode>{html.escape(p["vendorCode"])}</vendorCode>')
         
         # CDATA description
         if p['description']:

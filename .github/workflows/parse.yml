@@ -36,4 +36,5 @@ jobs:
         git add feed.xml
         # Only commit if there are changes
         git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update feed.xml"
+        git pull --rebase origin main
         git push

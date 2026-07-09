@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE yml_catalog SYSTEM "shops.dtd">
+<yml_catalog date="2026-07-09 19:49">
+  <shop>
+    <name>LunaBag</name>
+    <company>LunaBag</company>
+    <url>https://lunabag.com.ua</url>
+    <currencies>
+      <currency id="UAH" rate="1"/>
+    </currencies>
+    <categories>
+      <category id="150">Новинки</category>
+      <category id="151">Шкільні аксесуари</category>
+      <category id="131">Аксесуари</category>
+      <category id="132">Гаманці</category>
+      <category id="111">Дитячі рюкзаки</category>
+      <category id="110">Дитячі сумки</category>
+      <category id="135">Електроніка та аксесуари</category>
+      <category id="118">Косметички</category>
+      <category id="133">Розпродаж</category>
+      <category id="112">Рюкзаки</category>
+      <category id="115">Сумки</category>
+      <category id="126">Сумки-візки господарські на колесах</category>
+      <category id="127">Термосумки</category>
+      <category id="109">Скриньки</category>
+    </categories>
+    <offers>
+      <offer id="4411" available="true">
+        <url>https://lunabag.com.ua/index.php?route=product/product&amp;path=150&amp;product_id=4411</url>
+        <price>591.50.</price>
+        <currencyId>UAH</currencyId>
+        <categoryId>150</categoryId>
+        <picture>https://lunabag.com.ua/image/cache/catalog/3111-800x800.jpeg</picture>
+        <name>Конструктор Осінній лісовий будиночок на дереві</name>
+        <description><![CDATA[<div class="ds-product-tab-content-title d-flex align-items-center dark-text fsz-20 fw-500 pb-3 mb-3">
+<svg class="me-2" fill="none" height="21" viewbox="0 0 20 21" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 20.3529C4.48558 20.3529 0 15.8673 0 10.3529C0 4.83849 4.48558 0.352905 10 0.352905C15.5144 0.352905 20 4.83849 20 10.3529C20 15.8673 15.5144 20.3529 10 20.3529ZM10 1.74825C5.25488 1.74825 1.39535 5.60779 1.39535 10.3529C1.39535 15.098 5.25488 18.9576 10 18.9576C14.7451 18.9576 18.6047 15.098 18.6047 10.3529C18.6047 5.60779 14.7451 1.74825 10 1.74825ZM10.6977 14.539V10.2868C10.6977 9.9017 10.3851 9.58914 10 9.58914C9.61488 9.58914 9.30233 9.9017 9.30233 10.2868V14.539C9.30233 14.9241 9.61488 15.2366 10 15.2366C10.3851 15.2366 10.6977 14.9241 10.6977 14.539ZM10.9489 7.09709C10.9489 6.5836 10.533 6.16686 10.0186 6.16686H10.0093C9.49582 6.16686 9.08362 6.5836 9.08362 7.09709C9.08362 7.61058 9.50513 8.02732 10.0186 8.02732C10.5321 8.02732 10.9489 7.61058 10.9489 7.09709Z" fill="#00171F"></path>
+</svg>
+                            Опис
+                        </div>
+<div class="ds-product-tab-content-text secondary-text fw-300">
+<p>16*16*20</p>
+</div>]]></description>
+      </offer>
+      <offer id="4623" available="true">
+        <url>https://lunabag.com.ua/index.php?route=product/product&amp;path=150&amp;product_id=4623</url>
+        <price>91.00.</price>
+        <currencyId>UAH</currencyId>
+        <categoryId>150</categoryId>
+        <picture>https://lunabag.com.ua/image/cache/catalog/103-7-800x800.png</picture>
+        <picture>https://lunabag.com.ua/image/cache/catalog/103-77-800x800.png</picture>
+        <name>Конструктор «Жук Носоріг»</name>
+        <description><![CDATA[<div class="ds-product-tab-content-title d-flex align-items-center dark-text fsz-20 fw-500 pb-3 mb-3">
+<svg class="me-2" fill="none" height="21" viewbox="0 0 20 21" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 20.3529C4.48558 20.3529 0 15.8673 0 10.3529C0 4.83849 4.48558 0.352905 10 0.352905C15.5144 0.352905 20 4.83849 20 10.3529C20 15.8673 15.5144 20.3529 10 20.3529ZM10 1.74825C5.25488 1.74825 1.39535 5.60779 1.39535 10.3529C1.39535 15.098 5.25488 18.9576 10 18.9576C14.7451 18.9576 18.6047 15.098 18.6047 10.3529C18.6047 5.60779 14.7451 1.74825 10 1.74825ZM10.6977 14.539V10.2868C10.6977 9.9017 10.3851 9.58914 10 9.58914C9.61488 9.58914 9.30233 9.9017 9.30233 10.2868V14.539C9.30233 14.9241 9.61488 15.2366 10 15.2366C10.3851 15.2366 10.6977 14.9241 10.6977 14.539ZM10.9489 7.09709C10.9489 6.5836 10.533 6.16686 10.0186 6.16686H10.0093C9.49582 6.16686 9.08362 6.5836 9.08362 7.09709C9.08362 7.61058 9.50513 8.02732 10.0186 8.02732C10.5321 8.02732 10.9489 7.61058 10.9489 7.09709Z" fill="#00171F"></path>
+</svg>
+                            Опис
+                        </div>
+<div class="ds-product-tab-content-text secondary-text fw-300">
+<p>Конструктор «Жук Носоріг»</p><p><span style="font-size: 13px;"><br/></span></p><p><span style="font-size: 13px;">Милий конструктор — оригінальний подарунок і яскравий елемент декору </span></p><p><span style="font-size: 13px;"><br/></span></p><p><span style="font-size: 13px;">Матеріал: міцний та безпечний пластик</span></p>
+</div>]]></description>
+      </offer>
+    </offers>
+  </shop>
+</yml_catalog>

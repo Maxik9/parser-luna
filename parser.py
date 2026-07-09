@@ -228,6 +228,7 @@ def main():
     print(f"Found {len(categories)} categories.")
     
     all_products = []
+    seen_ids = set()
     
     for cat_id, cat in categories.items():
         product_links = scrape_category(cat_id, cat['url'])
@@ -236,7 +237,10 @@ def main():
         for link in product_links:
             prod_data = scrape_product(link, cat_id)
             if prod_data:
-                all_products.append(prod_data)
+                prod_id = prod_data['id']
+                if prod_id not in seen_ids:
+                    seen_ids.add(prod_id)
+                    all_products.append(prod_data)
             time.sleep(1) # polite delay between products
             
     print(f"Total products scraped: {len(all_products)}")

@@ -38,15 +38,19 @@ def get_categories():
             href = item.get('href')
             title = item.get_text(strip=True)
             if href and title:
-                # Extract path ID
+                # Extract path ID or generate a deterministic one
                 match = re.search(r'path=(\d+)', href)
                 if match:
                     cat_id = match.group(1)
-                    categories[cat_id] = {
-                        'id': cat_id,
-                        'name': title,
-                        'url': href
-                    }
+                else:
+                    import hashlib
+                    cat_id = str(int(hashlib.md5(href.encode('utf-8')).hexdigest(), 16) % 1000000 + 100000)
+                    
+                categories[cat_id] = {
+                    'id': cat_id,
+                    'name': title,
+                    'url': href
+                }
         return categories
     except Exception as e:
         print(f"Error fetching categories: {e}")
